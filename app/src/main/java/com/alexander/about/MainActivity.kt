@@ -2,6 +2,7 @@ package com.alexander.about
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.TextView
@@ -21,5 +22,10 @@ class MainActivity : AppCompatActivity(){
                 txv.text = "黃植達你好"
             }
         })
+    }
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        var txv:TextView = findViewById(R.id.txv)
+        txv.text = "螢幕觸控"
+        return true
     }
 }
